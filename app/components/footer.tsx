@@ -1,5 +1,5 @@
 import { BookOpen, Mail, MapPin, Share2 } from "lucide-react";
-import Image from "next/image";
+import { Logo } from "./logo";
 
 const social = [
   { icon: Share2, label: "LinkedIn" },
@@ -41,14 +41,8 @@ export function Footer() {
       <div className="wrap pb-6 pt-10">
         <div className="grid gap-8 border-b border-ink/20 pb-10 lg:grid-cols-12">
           <div className="flex flex-col gap-4 lg:col-span-4">
-            <div className="flex w-fit items-center gap-2 rounded-lg bg-white/10 p-3 backdrop-blur-[2px]">
-              <Image src="/images/brasao-inpt.png" alt="" width={101} height={40} className="h-10 w-auto mix-blend-multiply" />
-              <span className="flex flex-col">
-                <span className="text-lg font-bold leading-[18px] tracking-[-0.01em] text-white">INPT</span>
-                <span className="pt-1 text-[11px] font-bold leading-[11px] tracking-[0.06em] text-gold-soft">
-                  Instituto Nacional
-                </span>
-              </span>
+            <div className="w-fit rounded-lg bg-white p-2">
+              <Logo className="h-14" />
             </div>
             <p className="text-[13px] leading-[1.625] text-sky">
               Entidade de excelência acadêmica e rigor analítico dedicada à inteligência tributária, proposições de

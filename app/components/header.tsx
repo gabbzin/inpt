@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Logo } from "./logo";
 
 const links = [
   ["Sobre", "#sobre"],
@@ -12,14 +12,8 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 bg-white drop-shadow-[0_1px_4px_rgb(0_0_0/0.04)]">
       <div className="wrap flex h-20 items-center justify-between">
-        <a href="#" className="flex items-center gap-2">
-          <Image src="/images/logo-inpt.png" alt="INPT" width={88} height={44} className="h-11 w-auto" priority />
-          <span className="flex flex-col">
-            <span className="text-lg font-bold leading-[18px] tracking-[-0.025em] text-navy">INPT</span>
-            <span className="pt-1 text-[11px] font-bold uppercase leading-[11px] tracking-[0.05em] text-gold">
-              Planejamento e Tributação
-            </span>
-          </span>
+        <a href="#" aria-label="INPT">
+          <Logo className="h-14" />
         </a>
         <nav className="hidden items-center gap-6 lg:flex">
           {links.map(([label, href]) => (
